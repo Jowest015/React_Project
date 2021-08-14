@@ -20,7 +20,7 @@ May not need to use react-redux; so I need another 3rd party react component to 
 App will use 2 main pages: 
 - [x] The Dashboard which will include 5-day forecast
 - [x] Today's weather close-up; click on current day card to see the hourly forecast.
-- [x] Optional: current weather page; a constantly updating view of current weather.
+- [x] Optional: current weather page; a constantly updating view of current weather. not optional really
 
 ### Code in Basic Functions
 - [ ] create hard-coded data to example functionality
