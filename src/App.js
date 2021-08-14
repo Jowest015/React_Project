@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+
+export default function App() {
+  const weather = [
+    { id: 1, city: "Houston", current: "Sunny", temp: "79", hum: "15", wndspd: "15 knts"}
+  ]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Weather Dashboard</h1>
+
+      <Dashboard weather={weather} />
     </div>
   );
 }
 
-export default App;
+function Dashboard({ weather }) {
+  return (
+    <ul>
+      {weather.map((weather) => (
+        <li key={weather.id}>
+          {weather.city}
+          <br />
+          {weather.current}
+          <br />
+          {weather.temp}
+          <br />
+          {weather.hum}
+          <br />
+          {weather.wndspd}
+          </li>
+      ))}
+    </ul>
+  )
+}
