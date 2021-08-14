@@ -23,7 +23,8 @@ App will use 2 main pages:
 - [x] Optional: current weather page; a constantly updating view of current weather. not optional really
 
 ### Code in Basic Functions
-- [ ] create hard-coded data to example functionality
+- [x] create hard-coded data to example functionality
+- [ ] figure out how to display cards in horizontal formation
 - [ ] dashboard page will have 5 'cards with forecast information
 - [ ] close-up page will have morning, evening and night forecast or possibly hourly (might be a flex goal)
 - [ ] current page will show updated forecast(every 5 minutes) throughtout the day
