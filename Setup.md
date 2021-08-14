@@ -4,29 +4,55 @@
 
 Weather app will display city name, current weather(Icons?), temperature, humidity and wind speed...for the kite flyers.
 
+*pivot*
+
+Going to use openweather api which allows location searching instead of hardcode...it will be easier, funny enough
+
 - [x] Get react app up
 - [x] Set-up react router
-- [ ] Code in the basic functions of app (use hard coded attributes at the first)
-- [ ] Hook-up weather API(flex-goal...although very important)
+- [ ] Set-up react redux
+- [ ] Set-up searchbar
+- [ ] Set-up api (https://openweathermap.org/)
+- [ ] Set-up forecast component
+- [ ] Set-up current weather component
+- [ ] Set-up hourly forecast component
+- [ ] Add some styling (material-ui)
 
-May not need to use react-redux; so I need another 3rd party react component to meet project requirements.
+### Get React setup
+- [x] done
 
-### Get React App Installed
-- [x] 'nough said and done
+### Setup react router
+- [ ] setup (npm i react-router-dom)
+- [ ] import browserouter, switch, link, and route in app.jsx
+- [ ] wrap app in router component
+- [ ] add 404 in switch
 
-### Set-up React-router
-`npm i react-router-dom`
+### Setup react redux
+- [ ] Create a data store (`store.js`)
+- [ ] Create a reducer with an initial state (`reducer.js`)
+- [ ] Wrap app in `Provider` component
+- [ ] connect component to store with `connect()`, `MapStatetoProps`, `MapDispatchtoProps`
 
-App will use 2 main pages: 
-- [x] The Dashboard which will include 5-day forecast
-- [x] Today's weather close-up; click on current day card to see the hourly forecast.
-- [x] Optional: current weather page; a constantly updating view of current weather. not optional really
+### Setup searchbar.js
+- [ ]  create function `OnSubmit` pass in event
+- [ ]  create function `OnChange` pass in event, setState
+- [ ] make search form onSubmit, submit button, search input pass in OnChange function
+- [ ] export component
 
-### Code in Basic Functions
-- [x] create hard-coded data to example functionality
-- [ ] figure out how to display cards in horizontal formation
-- [ ] dashboard page will have 5 'cards with forecast information
-- [ ] close-up page will have morning, evening and night forecast or possibly hourly (might be a flex goal)
-- [ ] current page will show updated forecast(every 5 minutes) throughtout the day
-- [ ] style the cards on each page
+### Setup API
+- [ ] make free account
+- [ ] generate api key
+- [ ] verify your getting information
+- [ ] install axios
+- [ ] make api folder, make method file
+- [ ] store api key as .env variable or variable in GET file
+- [ ] make GET function , pass in api key
+- [ ] pass in location from searchbar form
+- [ ] export to searchbar
+
+### Setup forecast component
+
+### Setup current component
+
+### Setup hourly component
 

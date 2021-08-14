@@ -2,6 +2,8 @@ import React from "react";
 import { AppBar } from "@material-ui/core";
 import { Toolbar } from "@material-ui/core";
 import { Box } from "@material-ui/core";
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,6 +17,7 @@ import Dashboard from "./components/Dashboard";
 
 
 export default function App() {
+
 
   return (
     <Router>
@@ -51,9 +54,11 @@ export default function App() {
 
 function Home() {
   return (
-    <div>
-      <Dashboard weather={weather} />
-    </div>
+    <Card>
+      <CardContent>
+        <Dashboard weather={weather} />
+      </CardContent>
+    </Card>
   )
 }
 
