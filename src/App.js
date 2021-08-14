@@ -6,6 +6,10 @@ import {
   Link
 } from "react-router-dom";
 
+import CloseUp from "./components/Close-up";
+import Current from "./components/Current";
+import Dashboard from "./components/Dashboard";
+
 export default function App() {
   const weather = [
     { id: 1, city: "Houston", current: "Sunny", temp: "79", hum: "15", wndspd: "15 knts"}
@@ -44,38 +48,3 @@ export default function App() {
   );
 }
 
-function Dashboard({ weather }) {
-  return (
-    <ul>
-      {weather.map((weather) => (
-        <li key={weather.id}>
-          {weather.city}
-          <br />
-          {weather.current}
-          <br />
-          {weather.temp}
-          <br />
-          {weather.hum}
-          <br />
-          {weather.wndspd}
-          </li>
-      ))}
-    </ul>
-  )
-}
-
-function CloseUp() {
-  return (
-    <div>
-      <h1>Day-Cast</h1>
-    </div>
-  );
-}
-
-function Current() {
-  return (
-    <div>
-      <h1>Current Weather</h1>
-    </div>
-  );
-}
