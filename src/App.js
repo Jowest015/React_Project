@@ -12,8 +12,47 @@ import Dashboard from "./components/Dashboard";
 
 export default function App() {
   const weather = [
-    { id: 1, city: "Houston", current: "Sunny", temp: "79", hum: "15", wndspd: "15 knts"}
-  ]
+    {
+      id: 1,
+      city: "Houston",
+      current: "Sunny",
+      temp: "99",
+      hum: "15",
+      wndspd: "15 knts",
+    },
+    {
+      id: 2,
+      city: "Houston",
+      current: "Cloudy",
+      temp: "98",
+      hum: "20",
+      wndspd: "10 knts",
+    },
+    {
+      id: 3,
+      city: "Houston",
+      current: "Thunderstorms",
+      temp: "89",
+      hum: "25",
+      wndspd: "35 knts",
+    },
+    {
+      id: 4,
+      city: "Houston",
+      current: "Sunny",
+      temp: "99",
+      hum: "20",
+      wndspd: "15 knts",
+    },
+    {
+      id: 5,
+      city: "Houston",
+      current: "Sunny",
+      temp: "103",
+      hum: "10",
+      wndspd: "10 knts",
+    }
+  ];
   return (
     <Router>
       <div className="App">
