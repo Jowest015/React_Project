@@ -9,6 +9,8 @@ Weather app will display city name, current weather(Icons?), temperature, humidi
 3. Code in the basic functions of app (use hard coded attributes at the first)
 4. Hook-up weather API
 
+May not need to use react-redux; so I need another 3rd party react component to meet project requirements.
+
 ### Get React App Installed
 'nough said and done
 
