@@ -1,4 +1,4 @@
-export default function Dashboard({ weather }) {
+export default function Forecast({ weather }) {
   return (
     <ul>
       {weather.map((weather) => (

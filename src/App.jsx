@@ -1,9 +1,4 @@
 import React from "react";
-import { AppBar } from "@material-ui/core";
-import { Toolbar } from "@material-ui/core";
-import { Box } from "@material-ui/core";
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,40 +6,31 @@ import {
   Link
 } from "react-router-dom";
 
-import CloseUp from "./components/Close-up";
 import Current from "./components/Current";
-import Dashboard from "./components/Dashboard";
+import Forecast from "./components/Forecast";
+import Hourly from "./components/Hourly";
 
 
 export default function App() {
-
-
   return (
     <Router>
       <div className="App">
-        <AppBar position="relative">
-          <Toolbar>
-            <Box display="flex" width={'100%'} alignItems="center">
-              <Box flexGrow={1}>
-                <h1><Link to="/" style={{textDecoration:'none', color: 'white'}}>Weather App</Link></h1>
-              </Box>
-            </Box>
-          </Toolbar>
-        </AppBar>
         <ul>
           <li>
-            <Link to="/close-up">Day-Cast</Link>
+            <Link to="/">Forecast</Link>
+          </li>
+          <li>
+            <Link to="/hourly">Hourly Forecast</Link>
           </li>
           <li>
             <Link to="/current">Current Weather</Link>
           </li>
         </ul>
         <hr />
-        
 
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/close-up" component={CloseUp} />
+          <Route path="/close-up" component={Hourly} />
           <Route path="/current" component={Current} />
         </Switch>
       </div>
@@ -54,11 +40,8 @@ export default function App() {
 
 function Home() {
   return (
-    <Card>
-      <CardContent>
-        <Dashboard weather={weather} />
-      </CardContent>
-    </Card>
+        <Forecast weather={weather} />
+
   )
 }
 
