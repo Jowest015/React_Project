@@ -22,31 +22,31 @@ Going to use openweather api which allows location searching instead of hardcode
 - [x] done
 
 ### Setup react router
-- [ ] setup (npm i react-router-dom)
-- [ ] import browserouter, switch, link, and route in app.jsx
-- [ ] wrap app in router component
+- [x] setup (npm i react-router-dom)
+- [x] import browserouter, switch, link, and route in app.jsx
+- [x] wrap app in router component
 - [ ] add 404 in switch
 
 ### Setup react redux
-- [ ] Create a data store (`store.js`)
-- [ ] Create a reducer with an initial state (`reducer.js`)
+- [x] Create a data store (`store.js`)
+- [x] Create a reducer with an initial state (`reducer.js`)
 - [ ] Wrap app in `Provider` component
 - [ ] connect component to store with `connect()`, `MapStatetoProps`, `MapDispatchtoProps`
 
 ### Setup searchbar.js
-- [ ]  create function `OnSubmit` pass in event
-- [ ]  create function `OnChange` pass in event, setState
-- [ ] make search form onSubmit, submit button, search input pass in OnChange function
-- [ ] export component
+- [x]  create function `OnSubmit` pass in event
+- [x]  create function `OnChange` pass in event, setState
+- [x] make search form onSubmit, submit button, search input pass in OnChange function
+- [x] export component
 
 ### Setup API
-- [ ] make free account
-- [ ] generate api key
-- [ ] verify your getting information
-- [ ] install axios
-- [ ] make api folder, make method file
-- [ ] store api key as .env variable or variable in GET file
-- [ ] make GET function , pass in api key
+- [x] make free account
+- [x] generate api key
+- [x] verify your getting information
+- [x] install axios
+- [x] make api folder, make method file
+- [x] store api key as .env variable or variable in GET file
+- [x] make GET function , pass in api key
 - [ ] pass in location from searchbar form
 - [ ] export to searchbar
 

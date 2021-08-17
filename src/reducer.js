@@ -4,7 +4,8 @@ import deepcopy from "deepcopy";
 var initialState = {
   currentWeather: [
     {temp: "78"},
-    {humidity: "85"}
+    {humidity: "85"},
+    {windspeed: "4"}
   ]
 
 }
