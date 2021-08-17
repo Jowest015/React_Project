@@ -9,6 +9,8 @@ import {
 import Current from "./components/Current";
 import Forecast from "./components/Forecast";
 import Hourly from "./components/Hourly";
+import CurrentWeather from "./components/Current";
+import SearchBar from "./components/SearchBar";
 
 
 export default function App() {
@@ -40,8 +42,7 @@ export default function App() {
 
 function Home() {
   return (
-        <Forecast weather={weather} />
-
+  <SearchBar />
   )
 }
 
