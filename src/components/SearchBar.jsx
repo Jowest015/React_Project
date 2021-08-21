@@ -1,5 +1,9 @@
 import React from 'react';
+import { submitWeatherData } from '../redux/actions';
+import { connect } from 'react-redux';
+
 import { getCurrentWeather } from './../api/open-weather';
+
 
 class SearchBar extends React.Component {
   constructor(props) {
@@ -10,40 +14,76 @@ class SearchBar extends React.Component {
     };
   }
 
-  onChange(e) {
+  onInputChange(event) {
     this.setState({
-      location: e.target.value,
+      location: event.target.value,
     });
   }
-  onSubmit(e) {
-    e.preventDefault();
+
+  onFormSubmit(event) {
+    event.preventDefault();
 
     getCurrentWeather(this.state.location)
       .then((res) => {
+        console.log(res.data)
           this.setState({
-            temp: res.data.main.temp
-          });
+            ...this.state,
+            name: res.data.name,
+            temp: res.data.main.temp, 
+            description: res.data.weather[0].main,
+            humidity: res.data.main.humidity,
+            windspd: res.data.wind.speed
+          },
+          );
+
+          // dispatch function
+          this.props.onSubmit(res.data);
+
       });
   }
 
   render() {
     const location = this.state.location;
-    const temp = this.state.temp
+    const name = this.state.name;
+    const temp = this.state.temp;
+    const humidity = this.state.humidity;
+    const windspd = this.state.windspd;
+    const description = this.state.description;
 
     return (
       <div>
-      <form onSubmit={(e) => this.onSubmit(e)}>
+      <form onSubmit={(e) => this.onFormSubmit(e)}>
         <button type="submit">Search</button>
         <input
           id="search"
           name="search"
           value={location}
-          onChange={(e) => this.onChange(e)}>
+          onChange={(e) => this.onInputChange(e)}>
         </input>
       </form>
+        <p>{name}</p>
+        <p>{temp}</p>
+        <p>{description}</p>
+        <p>{humidity}</p>
+        <p>{windspd}</p>
       </div>
     )
   }
 }
 
-export default SearchBar;
+function mapStateToProps (state) {
+
+  return {};
+}
+
+function mapDispatchToProps (dispatch) {
+  return {
+    onSubmit: function (weatherData) {
+      dispatch(submitWeatherData(weatherData));
+    }
+    }
+  }
+
+var ConnectedWeather = connect(mapStateToProps, mapDispatchToProps)(SearchBar);
+
+export default ConnectedWeather;

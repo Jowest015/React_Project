@@ -1,26 +1,21 @@
 import React from 'react';
 
-class CurrentWeather extends React.Component {
-  render() {
+
+function CurrentWeather() {
+
     return (
       <div className="current-weather">
         <div className="current-weather_content">
-          <p className="current-weather_temp">78</p>
-          <p className="current-weather_descriptor">Clear</p>
+          <p className="current-weather_temp"></p>
+          <p className="current-weather_description"></p>
           {/* <img className="current-weather_item" url "" /> */}
         </div>
         <div>
-          <p className="current-weather_humidity">85</p>
+          <p className="current-weather_humidity"></p>
         </div>
       </div>
     )
-  }
 }
 
-export default function Current() {
-  return (
-    <div>
-      <CurrentWeather />
-    </div>
-  );
-}
+
+export default CurrentWeather;

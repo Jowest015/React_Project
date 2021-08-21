@@ -11,7 +11,7 @@ Going to use openweather api which allows location searching instead of hardcode
 - [x] Get react app up
 - [x] Set-up react router
 - [ ] Set-up react redux
-- [ ] Set-up searchbar
+- [x] Set-up searchbar
 - [ ] Set-up api (https://openweathermap.org/)
 - [ ] Set-up forecast component
 - [ ] Set-up current weather component
@@ -25,12 +25,12 @@ Going to use openweather api which allows location searching instead of hardcode
 - [x] setup (npm i react-router-dom)
 - [x] import browserouter, switch, link, and route in app.jsx
 - [x] wrap app in router component
-- [ ] add 404 in switch
+- [x] add 404 in switch
 
 ### Setup react redux
 - [x] Create a data store (`store.js`)
 - [x] Create a reducer with an initial state (`reducer.js`)
-- [ ] Wrap app in `Provider` component
+- [x] Wrap app in `Provider` component
 - [ ] connect component to store with `connect()`, `MapStatetoProps`, `MapDispatchtoProps`
 
 ### Setup searchbar.js
@@ -47,8 +47,8 @@ Going to use openweather api which allows location searching instead of hardcode
 - [x] make api folder, make method file
 - [x] store api key as .env variable or variable in GET file
 - [x] make GET function , pass in api key
-- [ ] pass in location from searchbar form
-- [ ] export to searchbar
+- [x] pass in location from searchbar form
+- [x] export to searchbar
 
 ### Setup forecast component
 
