@@ -1,21 +1,27 @@
 import React from 'react';
 
+import { connect } from "react-redux";
 
-function CurrentWeather() {
+const mapStateToProps = state => {
+  return { weatherData: state.weatherData };
+};
 
-    return (
-      <div className="current-weather">
-        <div className="current-weather_content">
-          <p className="current-weather_temp"></p>
-          <p className="current-weather_description"></p>
-          {/* <img className="current-weather_item" url "" /> */}
-        </div>
-        <div>
-          <p className="current-weather_humidity"></p>
-        </div>
+
+const CurrentWeather = ({ weatherData }) => (
+  <ul>
+    {weatherData.map(weather =>(
+      <div key={weather.id} className="weather_output">
+        <p>{weather.name}</p>
+        <p>{weather.temp}</p>
+        <p>{weather.description}</p>
+        <p>{weather.humidity}</p>
+        <p>{weather.windspd}</p>
       </div>
-    )
-}
+    ))}
+  </ul>
+)
 
 
-export default CurrentWeather;
+const ConnectedWeather = connect(mapStateToProps)(CurrentWeather);
+
+export default ConnectedWeather;

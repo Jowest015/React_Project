@@ -1,14 +1,3 @@
-export function fetchWeather (data) {
-  console.log(data)
-  
-  return {
-  type: 'FETCH_WEATHER',
-  data: data
-  
-  }
-
-}
-
 export function submitWeatherData (weatherData) {
 
   const weatherObj = {
@@ -18,7 +7,6 @@ export function submitWeatherData (weatherData) {
     humidity: weatherData.main.humidity,
     windspd: weatherData.wind.speed,
   };
-
 
   return{
     type: 'SUBMIT_WEATHER_DATA',
