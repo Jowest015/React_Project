@@ -4,12 +4,8 @@ var initialState = {
   weatherData: []
 };
 
-const weatherReducer = (state, action) => {
-  if (state === undefined) {
-    return initialState;
-  }
+const weatherReducer = (state = initialState, action) => {
 
-  console.log(action);
   let new_state = deepcopy(state);
 
   if (action.type === "SUBMIT_WEATHER_DATA") {

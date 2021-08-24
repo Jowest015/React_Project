@@ -9,8 +9,8 @@ const mapStateToProps = state => {
 
 const CurrentWeather = ({ weatherData }) => (
   <ul>
-    {weatherData.map(weather =>(
-      <div key={weather.id} className="weather_output">
+    {weatherData.map((weather, index) =>(
+      <div key={index} className="weather_output">
         <p>{weather.name}</p>
         <p>{weather.temp}</p>
         <p>{weather.description}</p>
